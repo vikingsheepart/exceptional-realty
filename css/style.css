@@ -1,0 +1,152 @@
+@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
+@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
+
+/* This is a comment */
+
+/* CSS Syntax:
+selector {
+	property: value;
+	property: value;
+}
+*/
+
+/*Type selector */
+
+p { /* select all <p> */
+	font-size: 1em; /* 16 px, ?pt, 100%, 1em */
+	line-height: 1.5em;
+}
+
+figcaption {
+/*	font-weight: normal;
+	font-size: 0.75em;
+	line-height: 1.5em;
+	font-family: Georgia, "New Times Roman", serif;*/
+	font: normal 0.75em/1.5em "Elsie Swash Caps", cursive;
+	color: #777;
+	text-align: right;
+}
+
+/* Class selector (applied to as many elements as you like) */
+
+.milk-text {/*select elements with a class attribute = milk-text*/
+	font: bold 2.6em "Elsie Swash Caps" , cursive;
+	color: white;
+	text-shadow: 0 2px 3px #000;
+}
+
+/*ID selector (apply to one unique element per page)*/
+
+#logo {/*select elements with ID equal to logo*/
+
+}
+
+/*Descendent selector */
+
+#logo h1 {/*selects h1 only if they are in element with id="logo"*/
+			font-family: 'Clicker Script' cursive;
+}
+
+#logo h2 {/*selects h1 only if they are in element with id="logo"*/
+			font-family: 'Elsie Swash Caps' cursive;
+}
+
+/*Psuedo Selector*/
+
+#details a:link, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+#details a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+#details a:active {
+	color: red;
+}
+
+/* MEDIA */
+
+img, video, audio {
+	max-width: 100%;
+}
+
+/* style layout */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 960px; 
+	margin: 0 auto;
+}
+
+.col-1 {
+	float: left;
+	width: 32%;
+	/*background: #BEBEBE;*/
+}
+
+.col-2 {
+	float: left;
+	width: 66%;
+	/*background: #BEBEBE;*/
+}
+
+.col-3 {
+	background: #BEBEBE;
+
+}
+
+[class*="col-"] {
+	margin-left: 2%;
+}
+
+.first {
+	margin-left: 0%;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+/* SECTIONS */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #FFF;
+	z-index: 1;
+}
+
+section {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#social {
+	position: fixed;
+	top: 200px;
+	right: 20px;
+	width: 40px;
+	z-index: 1;
+}
+
+#social a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: yellow;
+}
